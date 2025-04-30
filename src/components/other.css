@@ -1353,15 +1353,6 @@ h2.title_b717a1,
 	font-weight: 500;
 }
 
-/* Today at */
-:is(.timestampInline_c19a55) time[aria-label^="Today at"] {
-	visibility: hidden;
-}
-:is(.timestampInline_c19a55) time[aria-label^="Today at"]:before {
-	content: attr(aria-label);
-	visibility: visible;
-}
-
 /* custom status modal */
 .header_dbc4b7 {
 	background-image: url("https://discord.com/assets/7d67842f58b6d155.svg");
