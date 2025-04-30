@@ -1,15 +1,17 @@
 
-> [!NOTE]
-> Following discord's [age verification](https://discord.com/press-releases/discord-launches-teen-by-default-settings-globally) announcement from the 9th feb, i (milbit) decided to step down indefinitely. kinggamingyt will be the maintainer going forward.
-> 
->  i can no longer justify creating a theme for a platform that wants me to send my ugly ass face just to use it. i don't trust them with my sensitive data, especially after the [last breach](https://discord.com/press-releases/update-on-security-incident-involving-third-party-customer-service).
->
-> 
-> if you're looking for an alternative, there is [stoat](https://stoat.chat/) and [spacebar](https://spacebar.chat/), stoat having the most users
->
-> ~~**Avoid Fluxer.** While it may be open-source under the AGPL license, [it uses a CLA; **The project maintainer Hampus owns all contributor code and can make it closed-source later**](https://cla-assistant.io/fluxerapp/fluxer), a technique used by things like MongoDB to lock users in and enshittify later. It is not truly free~~
-> 
-> CLA was removed on the 18th february!
+
+# Please do not use this fork. I made this fork to use OldCord on my already tweaked discord.
+
+
+# a fix is being worked on!
+There's nothing *you* can do. This is neither vencord's, mine or discord's (intentional) fault.
+
+Discord changed something behind-the-scenes, and as a side effect, it killed every theme.
+It seems like it's easy to fix, though! please be patient :3
+
+It's not to get you to use the new ui, it's simply them updating their [backend](https://en.wikipedia.org/wiki/Front_end_and_back_end).
+Discord themes are also not dependent on vencord or betterdiscord, they simply add the theme into discord's code.
+
 # OldCord
 
 A Discord theme that tries to restore its 2020 UI
