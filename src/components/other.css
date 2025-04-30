@@ -1371,15 +1371,6 @@ h2.title_b717a1,
 	font-weight: 500;
 }
 
-/* Today at */
-:is(.timestampInline_c19a55) time[aria-label^="Today at"] {
-	visibility: hidden;
-}
-:is(.timestampInline_c19a55) time[aria-label^="Today at"]:before {
-	content: attr(aria-label);
-	visibility: visible;
-}
-
 /* custom status modal */
 .container__53cea:has(.textArea__08bd2, .actionBarLeading__53cea) {
 	.header__53cea {
