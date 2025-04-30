@@ -221,7 +221,6 @@ code {
 .item__344e6 {
 	cursor: pointer;
 }
-
 /** checkboxes*/
 .checkbox_f525d3 {
 	&:not(.round_f525d3) {
@@ -283,9 +282,11 @@ code {
 	border-radius: 5px;
 	background: #0000 !important;
 }
+
 .item__001a7[aria-checked="false"] .text-md\/medium_cf4812 {
 	color: var(--radio-bar-accent-color) !important;
 }
+
 .item__001a7 .radioBar__001a7 {
 	border: solid 1px var(--background-tertiary);
 	background: var(--deprecated-card-editable-bg);
