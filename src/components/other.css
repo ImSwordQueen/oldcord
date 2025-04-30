@@ -223,7 +223,6 @@ code {
 .item__344e6 {
 	cursor: pointer;
 }
-
 /** checkboxes*/
 .checkbox__09aca {
 	border-radius: 3px;
@@ -289,6 +288,7 @@ code {
 .item__88a69 {
 	background: none !important;
 }
+
 .item__88a69 .radioBar__88a69 {
 	border: solid 1px var(--background-tertiary);
 	border-radius: 4px;
