@@ -1,3 +1,5 @@
+# Please do not use this fork. I made this fork to use OldCord on my already tweaked discord.
+
 # OldCord
 
 A Discord theme that tries to restore its 2020 UI
