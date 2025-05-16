@@ -389,17 +389,20 @@ code {
 	background-color: var(--deprecated-text-input-bg) !important;
 	border: 1px solid var(--deprecated-text-input-border);
 	transition: border-color 0.2s ease-in-out;
-}
+	&:focus{
+			border-color: var(--blurple) !important;
 
+	}
+}
+.select__3f413:hover:not([aria-disabled="true"]),
+.input__0f084:hover,
+.bioTextArea__6a919:hover {
+	border-color: var(--deprecated-text-input-border-hover) !important;
+}
 .input__0f084::-webkit-input-placeholder:not(.textarea_dde0a8) {
 	color: var(--text-muted);
 }
 
-.select__3f413:hover:not([aria-disabled="true"]),
-.input__0f084:hover,
-.bioTextArea__6a919:hover {
-	border-color: var(--deprecated-text-input-border-hover);
-}
 
 .emojiInput_e7d73e.input__0f084 {
 	padding: 0 !important;
@@ -1427,6 +1430,16 @@ h2.title_b717a1,
 		margin-left: 100px;
 		margin-top: -50px;
 	}
+	.fieldButton__1fed1:not(.removeButton__1fed1) {
+		background-color: var(--blurple);
+		color: var(--white);
+		&:hover {
+			background-color: var(--blurple-hover);
+		}
+		&:active {
+			background-color: var(--blurple-active);
+		}
+	}
 }
 
 /* clan tags */
@@ -1610,7 +1623,7 @@ https://github.com/XYZenix/DTM-16
 }
 
 :is(#equicordthemes-tab, #vencordthemes-tab) .sectionTitle__7bffb:before {
-	content: "Using OldCord with other themes WILL break stuff. Please don't report issues.";
+	content: "OldCord note: Using it with other themes may break stuff. Please don't report issues (this is not from vencord)";
 	color: #fff;
 	padding: 10px;
 	background: var(--red-transparent);
@@ -1618,7 +1631,7 @@ https://github.com/XYZenix/DTM-16
 	border-radius: 3px;
 }
 :is(#themes-tab) .bd-addon-controls:after {
-	content: "Using OldCord with other themes WILL break stuff. Please don't report issues.";
+	content: "OldCord note: Using it with other themes may break stuff. Please don't report issues (this is not from betterdiscord)";
 	color: #fff;
 	margin-top: 10px;
 	padding: 10px;
