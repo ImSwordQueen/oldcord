@@ -1,5 +1,4 @@
-
-.theme-dark:not(html.custom-theme-background, :has(#clientThemeVars)) {
+.theme-dark:not(html.custom-theme-background, html:has(#clientThemeVars),.theme-darker) {
 		--background-base-low: var(--background-primary);
 		--background-base-lower: var(--background-primary);
 		--background-base-lowest: var(--background-secondary);
@@ -8,7 +7,7 @@
 		--bg-base-tertiary: var(--background-tertiary);
 		--custom-channel-members-bg: var(--background-secondary);
 		--background-mod-subtle: var(--background-modifier-hover);
-		--bg-brand: var(--blurple);
+		--bg-brand: var(--blurple, var(--blurple-50));
 		--modal-footer-background: color-mix(in oklab, var(--primary-630) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 		--checkbox-background-checked: var(--blurple);
 		--text-normal: color-mix(in oklab, var(--primary-230) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -21,25 +20,33 @@
 		--__spoiler-warning-background-color: hsl(var(--black-500-hsl) / 0.6);
 		--__spoiler-warning-background-color--hover: hsl(var(--black-500-hsl) / 0.9);
 		--__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl) / 0.1);
-	}
-	
-	.theme-darker {
+}
+	.theme-darker {	
+		--background-primary: var(--background-base-low);
+		--background-base-lowest: var(--background-secondary);
+		--background-secondary: color-mix(in oklab,var(--neutral-89) 90%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%)) !important;
+		--background-tertiary: color-mix(in oklab,var(--neutral-94) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+		--background-surface-highest: var(--background-primary);
+		
 		--header-secondary: color-mix(in oklab,var(--neutral-5) 70%,var(--theme-text-color,#000) var(--theme-text-color-amount,0%)) !important;
 		--background-secondary-alt: color-mix(in oklab, var(--neutral-86) 30%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 		--chat-background-default: hsl(218 4% 18% / 1) !important;
 	}
 	.theme-midnight {
+		--background-primary:  color-mix(in oklab,var(--neutral-90) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+		--background-base-lowest: var(--background-secondary);
+		--background-secondary: color-mix(in oklab,var(--neutral-95) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%)) !important;
+		--background-tertiary: color-mix(in oklab,var(--neutral-100) 50%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+		--background-surface-highest: var(--background-primary);
+		
+
 		--chat-background-default: hsl(0 0% 11% / 1) !important;
 		--background-secondary-alt: color-mix(in oklab, var(--neutral-86) 60%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 	}
 	html.theme-dark:not(.theme-darker, .theme-midnight, .custom-theme-background) .interactive__972a0 {
 		color: var(--channels-default);
 	}
-	.chat_f75fb0,.container__133bf,
-	html:is(.theme-darker, .theme-midnight, .custom-theme-background)
-		:is(.content_f75fb0, .subtitleContainer_f75fb0, .sidebarList_c48ade, .container_c8ffbb) {
-		border: none !important;
-	}
+
 	
 	.sidebarRegionScroller__23e6b{
 		background: none !important
@@ -197,7 +204,7 @@
 	
 		.panels_c48ade {
 			display: flex;
-			width: 242px;
+			width: 240px;
 			flex-direction: column;
 			border: none;
 			border-radius: 0;
@@ -662,11 +669,17 @@
 				line-height: 20px;
 			}
 		}
+		.search__97492:is(.open__97492) .searchBar__97492 {
+			width: 240px;
+		}
 		.container__55c99 {
 			box-shadow: var(--shadow-border), var(--shadow-high);
 			border-radius: 3px;
 			border: none;
 			background: var(--bg-overlay-3, var(--background-primary));
+			.queryContainer__55c99 {
+				background: var(--bg-base-tertiary);
+			}
 		}
 		.container_fea832 {
 			background-color: var(--background-tertiary);
@@ -785,20 +798,25 @@
 			grid-template-columns: [start] min-content [sidebarStart] unset [end];
 			grid-template-rows: [start] 1fr [panelsStart] min-content [end];
 			border-radius: 0;
-		}
+	}
+	.chat_f75fb0,.container__133bf,
+		:is(.content_f75fb0, .subtitleContainer_f75fb0, .sidebarList_c48ade, .container_c8ffbb) {
+		border: none !important;
+	}
 		.base_c48ade .sidebar_c48ade > .guilds_c48ade {
 			grid-area: guilds;
 			margin-bottom: 0;
 		}
 		.base_c48ade .sidebar_c48ade > .sidebarList_c48ade {
 			grid-area: sidebar;
-			width: 241px;
+			width: 240px;
 			--custom-app-panels-height: 0;
 		}
 		.base_c48ade .sidebar_c48ade > .sidebarResizeHandle_c48ade,
 		:root .base_c48ade .sidebar_c48ade:after {
 			display: none;
 		}
+	
 		/*Betterfolders (vencord)*/
 		.base_c48ade.vc-betterFolders-sidebar-grid {
 			grid-template-columns: [start] 80px [guilds-end] min-content [betterFoldersSidebar-end] 240px [channelsEnd] 1fr [end];
@@ -1244,6 +1262,7 @@
 			-webkit-text-size-adjust: none;
 			text-size-adjust: none;
 			color: var(--text-normal);
+			background: var(--background-base-lowest);
 		}
 		.audioControls_cf09d8 {
 			border-radius: 3px;
@@ -1755,6 +1774,41 @@
 		.popout__76f04, .container__4e30a {
 			background: var(--background-surface-higher);
 			border-radius: 4px;
+		}
+
+		/* channel updates */
+		.wrapper__44df5 {
+			background: var(--background-tertiary);
+			border-radius: 5px;
+			border: unset;
+			margin: 0 0 24px 0;
+			height: 20px;
+			.content__44df5 {
+				margin-left: 8px;
+				.title__44df5 {
+					color: var(--header-primary);
+				}
+			}
+			.content__44df5:before {
+				content: url(https://discord.com/assets/dc7e9e55b3a6d39d24acdd650ecc2ef3.svg);
+				transform: scale(0.65)
+			}
+		}
+
+		/* clip footer */
+		.mosaicItem__6c706:is(.mosaicItemWithFooter__6c706) .container_b9f75c {
+			background: var(--background-base-lowest);
+		}
+
+		/* edit group */
+		.modal__46773 {
+			padding: unset;
+			.alignCenter_abf706 button, .modalContent__46773 .inputWrapper__0f084, .footerSeparator__49fc1 {
+				padding: 12px;
+			}
+			.alignCenter_abf706 button {
+				margin-top: 4px;
+			}
 		}
 	}
 	
