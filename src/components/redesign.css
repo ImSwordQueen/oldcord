@@ -1,4 +1,4 @@
-.theme-dark {
+.theme-dark,.theme-light {
 	&:not(.custom-theme-background) {
 		--background-base-low: var(--background-primary) !important;
 		--background-base-lower: var(--background-primary) !important;
@@ -67,7 +67,7 @@ html.theme-dark:not(.theme-darker, .theme-midnight, .custom-theme-background) .i
 	background: none !important;
 }
 /* remove the title bar on web & linux */
-.platform-web,
+.platform-web:not(html[data-dorion-platform="linux"]),
 .platform-linux {
 	.base_c48ade {
 		grid-template-areas: "titleBar titleBar titleBar" "notice notice notice" "guildsList channelsList page";
@@ -90,6 +90,12 @@ html.theme-dark:not(.theme-darker, .theme-midnight, .custom-theme-background) .i
 		top: 69px !important;
 	}
 }
+  /* better support a client that like only 1 person uses but i hate disappointing people so im doing it */
+	html[data-dorion-platform="linux"] {
+		.bar_c38106 .trailing_c38106 {
+			top: 55.3px !important;
+		}
+	}
 /* platform-specific fixes */
 .platform-osx .base_c48ade {
 	grid-template-areas:
@@ -251,7 +257,7 @@ html.platform-osx .title_c38106 {
 	.sidebar__23e6b:not(.selected_b3f026, :hover) {
 		color: var(--interactive-normal);
 	}
-	.colorDefault_c1e9c4 .label_c1e9c4 {
+	&.theme-dark .colorDefault_c1e9c4 .label_c1e9c4 {
 		color: unset;
 	}
 	.colorDefault_c1e9c4:active:not(.hideInteraction_c1e9c4) {
@@ -1127,6 +1133,7 @@ html.platform-osx .title_c38106 {
 		.attachButton__0923f {
 			height: 40px;
 			padding: 10px 16px;
+			margin-right: 0;
 		}
 		.attachButtonInner__0923f {
 			svg {
@@ -1402,7 +1409,7 @@ html.platform-osx .title_c38106 {
 		padding-top: 24px;
 	}
 	.mainCard_f369db {
-		background: var(--bg-mod-faint);
+		background: var(--background-base-lowest);
 		border: 1px solid transparent;
 	}
 	.container_faa96b {
@@ -1427,6 +1434,7 @@ html.platform-osx .title_c38106 {
 	.pill_a2c9e8 {
 		background-color: var(--background-secondary-alt);
 		border: 1px solid transparent;
+		border-radius: 4px;
 		color: var(--text-default);
 	}
 	.pill_a2c9e8.clickable_a2c9e8:not(.disabled_a2c9e8):hover {
@@ -1613,6 +1621,9 @@ html.platform-osx .title_c38106 {
 	/* call background */
 	.wrapper_cb9592.minimum_cb9592 .callContainer_cb9592 {
 		background: #202225;
+	}
+	.pulseGradient__11664 {
+		display: none;
 	}
 
 	/* friends tab wumpus */

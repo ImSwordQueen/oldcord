@@ -14,11 +14,14 @@ A theme for Discord that brings the 2020 UI back without removing features
 > - To have the old gray colors, use the "Ash" theme in appearance settings
 >   - If you use vencord's "Client Theme" plugin, use darker
 
-<details> <summary>Light mode (shit)</summary>
+<details> <summary><h3>Light mode (usable!)</h3></summary>
 
-Light mode is currently not properly supported, please give me a trillion euros so i work on it :3
+Light mode does NOT have 2020 colors and it's tailored to ME but i think nobody cares at all
 
 <img src=https://raw.githubusercontent.com/milbits/oldcord/master/.github/previewLight.webp>
+preview outdated
+
+there's a `--oldcord-tint` variable to adjust the tint, value/number has to be in HSL hue
 
 </details>
 
@@ -33,6 +36,7 @@ These are usually included in oldcord.theme.css, so all you need to do is remove
 | Name                   | Preview                                                                                | CSS                                                                                |
 | ---------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
 | Show Profile Effects (the one you prob want) | ![Image](https://raw.githubusercontent.com/milbits/oldcord/master/.github/showeffects.webp)                                                         | `@import url("https://milbits.github.io/oldcord/src/components/showEffects.css");` |
+| Show Clan Tags | im too lazy for an image                                                     | `@import url("https://milbits.github.io/oldcord/src/components/showTags.css");` |
 | Old Plead Emoji        | ![Image](https://raw.githubusercontent.com/milbits/oldcord/master/.github/emojis.webp)     | `@import url("https://milbits.github.io/oldcord/src/components/oldEmojis.css");`   |
 | Context Menu hover bg. | <img src=https://raw.githubusercontent.com/milbits/oldcord/master/.github/oldcontext.webp> | `@import url("https://milbits.github.io/oldcord/src/components/oldContext.css");`  |
 | HeaderPresence | ![Image](https://github.com/user-attachments/assets/1a809f81-0d76-4146-ad25-941b4332bcbd)                                                           | https://betterdiscord.app/plugin/HeaderPresence |
