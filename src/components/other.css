@@ -407,7 +407,6 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__001a7[style="--radio-bar-acce
 	outline: none;
 	opacity: 1;
 	right: 0px;
-
 }
 /*fuck ai!! rahhh*/
 .hoverButton__06ab4:has(.lottieIcon__5eb9b) {
@@ -428,9 +427,8 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__001a7[style="--radio-bar-acce
 .visualMediaItemContainer_f4758a .hoverButtonGroup__06ab4 {
 	background-color: rgb(0 0 0 / 0.5);
 	transform: translateY(-40px);
-	.mosaicItem__6c706:hover &{
+	.mosaicItem__6c706:hover & {
 		transform: translateY(-4px);
-		
 	}
 }
 /* make download button bigger */
@@ -439,7 +437,7 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__001a7[style="--radio-bar-acce
 	height: 24px !important;
 }
 /* remove background hover */
-.hoverButton__06ab4{
+.hoverButton__06ab4 {
 	&:hover {
 		background: none;
 	}
@@ -490,27 +488,53 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__001a7[style="--radio-bar-acce
 }
 
 /** forum channel*/
-/* tags in create post*/
+.card_f369db {
+	padding-bottom: 8px;
+}
+.grid_f369db > div:first-child,
+.headerRow_f369db,
+.list_f369db > div:first-child {
+	min-width: 400px;
+	padding-right: var(--spacing-16);
+}
+
+.tagsContainer_f369db {
+	padding-top: 24px;
+}
+
+.container_faa96b {
+	padding: 12px;
+}
+/* tags*/
+.sortDropdown_f369db,
+.tagsButton_f369db {
+	background: var(--background-secondary-alt) !important;
+	&:hover {
+		background: var(--background-tertiary) !important;
+	}
+}
+.sortDropdownText_f369db{
+	display: none
+}
+#app-mount .pill_a2c9e8 {
+	transition: 0.17s ease;
+	border: none;
+}
 #app-mount .pill_a2c9e8.selected_a2c9e8 {
-	background-color: var(--brand-experiment-35a);
-	border-color: transparent;
-	transition: 0.1s ease;
-	color: #fff !important;
-}
-
-#app-mount .pill_a2c9e8.selected_a2c9e8:hover {
 	background-color: var(--brand-experiment-50a);
+	border-color: transparent;
+	color: #fff !important;
+	border-radius: 6px;
+}
+#app-mount .pill_a2c9e8.selected_a2c9e8:hover {
+	background-color: var(--brand-experiment-70a);
 	transition: 0.1s ease;
 }
-
 .pill_a2c9e8.selected_a2c9e8 .defaultColor__77578 {
 	color: var(--interactive-active);
 	transition: 0.1s ease;
 }
 
-.theme-light .pill_a2c9e8 {
-	background: var(--background-secondary);
-}
 
 /* make the button gray when following*/
 .buttonInner__34c2c,
@@ -551,15 +575,6 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__001a7[style="--radio-bar-acce
 	min-width: 1.5rem;
 }
 
-.submitButton-3B-dZd {
-	border-radius: 3px !important;
-}
-
-/* change tag backgrounds*/
-.container-2qVG6q .pill_a2c9e8 {
-	background-color: var(--background-tertiary);
-}
-
 .botTagOP__82f07 {
 	color: var(--blurple);
 	background-color: transparent;
@@ -588,12 +603,12 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__001a7[style="--radio-bar-acce
 /* posts*/
 .container__9a337,
 .container_faa96b {
-	transition: 0.17s ease !important;
+	transition: 0.1s ease !important;
 	transform: none !important;
 	border-radius: 5px;
 	box-shadow: none !important;
 	background: var(--deprecated-card-editable-bg);
-	border: none;
+	border: none !important;
 }
 
 .content__99f8c .container__9a337:hover,
@@ -669,8 +684,8 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__001a7[style="--radio-bar-acce
 
 /** Connections (in settings > connections)*/
 .connectContainer_c7f964 {
-	border: 1px solid var(--deprecated-text-input-border);
-	border-radius: 6px;
+	border-radius: 8px;
+	background: var(--background-secondary-alt);
 }
 .accountButtonInner_c7f964 {
 	background-color: var(--background-modifier-hover);
@@ -1379,7 +1394,7 @@ h2.title_b717a1,
 	> .noWrap_abf706:is(.header__49fc1) {
 		visibility: hidden;
 		padding: unset;
-		margin-top: -16px
+		margin-top: -16px;
 	}
 	> .modalContent__837b7 {
 		padding-bottom: 30px;
@@ -1388,7 +1403,7 @@ h2.title_b717a1,
 			text-transform: uppercase;
 		}
 		.heading-lg\/semibold_cf4812:before {
-			content: "WOULD YOU LIKE TO "
+			content: "WOULD YOU LIKE TO ";
 		}
 		.eyebrow_b717a1 .text-md\/medium_cf4812 {
 			font-size: 12px;
@@ -1404,7 +1419,7 @@ h2.title_b717a1,
 			margin-left: -14px;
 		}
 		.radioGroup__837b7 {
-			gap: var(--space-8)
+			gap: var(--space-8);
 		}
 		.item__001a7[aria-checked="true"] .info__001a7 {
 			color: var(--white);
@@ -1607,11 +1622,11 @@ https://github.com/XYZenix/DTM-16
 	flex: 1 1 100%;
 }
 /*vc/call buttons*/
-.buttonSection__1405b{
+.buttonSection__1405b {
 	background: var(--background-floating);
 	border: none;
 	border-radius: 6px;
-	& +:not(.redGlow_f1ceac) path{
+	& + :not(.redGlow_f1ceac) path {
 		fill: var(--interactive-hover) !important;
 	}
 }
@@ -1631,8 +1646,11 @@ https://github.com/XYZenix/DTM-16
 .applicationStore_f07d62 {
 	.colorBrandInverted__201d5 {
 		background: var(--green);
-		.premiumSubscribeButton_e00877, .premiumIcon_e00877, .v2SubButtonText_c880e8 {
-			color: var(--white)
+		.premiumSubscribeButton_e00877,
+		.premiumIcon_e00877,
+		.v2SubButtonText_c880e8,
+		.v2SubButtonText_ac86f6 {
+			color: var(--white);
 		}
 		&:hover {
 			background: var(--green-hover);
@@ -1641,8 +1659,9 @@ https://github.com/XYZenix/DTM-16
 			background: var(--green-active);
 		}
 	}
-	.brandShine_e00877, .buttonShine__6a443 {
-		color: hsla(0,0%,100%,.1) !important;
+	.brandShine_e00877,
+	.buttonShine__6a443 {
+		color: hsla(0, 0%, 100%, 0.1) !important;
 	}
 	.giftButton__82222 {
 		border: unset;
@@ -1654,7 +1673,7 @@ https://github.com/XYZenix/DTM-16
 	.giftButton__82222:active {
 		background-color: var(--button-secondary-background-active);
 	}
-	.heroHeadingV2Container_c880e8 .marketingPageContainer__81281 .marketingPageHeading__81281:before {
+	.heroHeadingV2Container_c880e8 .marketingPageTextContainer__81281 .marketingPageHeading__81281:before {
 		content: " ";
 		background-image: url(https://raw.githubusercontent.com/milbits/oldcord/refs/heads/main/src/assets/Discord_Nitro_Wordmark_Filled.svg);
 		width: 160px;
@@ -1666,8 +1685,8 @@ https://github.com/XYZenix/DTM-16
 		transform: scale(1.4);
 	}
 	.marketingPageTextContainer__81281 {
-	    display: flex;
-	    flex-direction: column;
+		display: flex;
+		flex-direction: column;
 	}
 	.marketingPageCTAContainer__81281 {
 		order: 2;
@@ -1685,15 +1704,141 @@ https://github.com/XYZenix/DTM-16
 	background: unset !important;
 	height: 49px !important;
 	svg path {
-		fill: var(--channel-icon)
+		fill: var(--channel-icon);
 	}
 }
 .homeWrapper__0920e {
 	border-top: unset !important;
 }
 .heroHeaderSideGradient_c880e8,
-.bentoSideGradient_abac7b, 
-.leftGradient__14cf2, 
+.bentoSideGradient_abac7b,
+.leftGradient__14cf2,
 .rightGradient__14cf2 {
 	display: none;
+}
+
+/* authed apps */
+.authedAppV2__50a54 {
+	border: 1px solid var(--background-tertiary);
+	border-radius: 5px;
+	background: none;
+	.headerV2__50a54 {
+		background: none;
+		.appAvatarV2__50a54 {
+			border-radius: 50%;
+		}
+	}
+	.contentExpandContainer__217b7 {
+		height: 100% !important;
+		.appDetailsSectionHeader__50a54 {
+			cursor: default;
+			.heading-sm\/medium_cf4812 {
+				font-size: 12px;
+				color: var(--header-secondary) !important;
+				font-weight: 800;
+				font-family: var(--font-display);
+				margin-bottom: 4px;
+				text-transform: uppercase;
+			}
+			svg {
+				display: none;
+			}
+		}
+	}
+	.appDetailsContainer__50a54 {
+		display: flex;
+		flex-direction: column;
+	}
+	.appDetailsContainer__50a54 .appDetailsSection__50a54 {
+		border-bottom: unset;
+	}
+	.appDetailsContent__50a54 .text-sm\/normal_cf4812 {
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.permissionsDescription__50a54 {
+		display: none;
+	}
+	.footer__50a54 {
+		margin: unset;
+		order: -1;
+		position: absolute;
+		align-self: end;
+		margin-right: 47px;
+		margin-top: -57px;
+		.deauthorizeButton__50a54 {
+			opacity: 0;
+			-webkit-transition: opacity 0.2s ease;
+			transition: opacity 0.2s ease;
+		}
+		.warningContainer__50a54 {
+			display: none; /* hated trying to position this so much i gave up */
+		}
+	}
+}
+
+.authedAppV2__50a54:hover .deauthorizeButton__50a54 {
+	opacity: 1;
+}
+
+/* new invites */
+.guildInviteContainer__083ae {
+	box-sizing: border-box;
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	max-width: 432px;
+	min-width: 160px;
+	max-height: 174px;
+	height: unset !important;
+	-webkit-user-select: none;
+	user-select: none;
+	width: 100%;
+	border: unset;
+	.cardHeightMeasure__083ae:before {
+		content: "YOU'VE BEEN INVITED TO JOIN A SERVER";
+		position: absolute;
+		top: 85px;
+		left: 16px;
+		font-family: var(--font-display);
+        font-size: 12px;
+        line-height: 1.3333333333333333;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+		color: var(--header-secondary);
+	}
+	.avatarContainer_dca174 {
+		margin-top: 36px;
+		.avatarWrapper_dca174 {
+			background: unset;
+			height: 50px;
+			width: 50px;
+		}
+	}
+	.header__6e500 {
+		position: absolute;
+		margin-top: 116px;
+		margin-left: 70px;
+	}
+	.established__6e500 {
+		display: none;
+	}
+	.body_dca174 {
+		display: none;
+	}
+	.footer__083ae {
+		display: flex;
+		flex-direction: row-reverse;
+		position: relative;
+		margin-top: -68px;
+		.gradient__083ae {
+			display: none;
+		}
+		button {
+			line-height: 20px;
+			height: 40px;
+			min-height: unset;
+		}
+	}
 }

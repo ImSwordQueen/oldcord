@@ -1,6 +1,8 @@
-.theme-dark,.theme-light {
+.theme-dark,
+.theme-light {
 	&:not(.custom-theme-background) {
 		--background-base-low: var(--background-primary) !important;
+		--bg-base-tertiary: var(--background-tertiary);
 		--background-base-lower: var(--background-primary) !important;
 		--background-base-lowest: var(--background-secondary) !important;
 		--custom-channel-members-bg: var(--background-secondary) !important;
@@ -26,44 +28,44 @@
 	--__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl) / 0.1);
 }
 .theme-darker {
-	--bg-brand: var(--blurple, var(--blurple-50));
-
+	--background-modifier-accent: hsl(217, 0%, 20%);
 	--background-primary: color-mix(in oklab, var(--neutral-80) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 	--background-secondary: color-mix(
 		in oklab,
-		var(--neutral-85) 100%,
+		var(--neutral-84) 100%,
 		var(--theme-base-color, #000) var(--theme-base-color-amount, 0%)
 	) !important;
-	--background-tertiary: color-mix(in oklab, var(--neutral-90) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-
+	--background-tertiary: color-mix(in oklab, var(--neutral-92) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 	--header-secondary: color-mix(
 		in oklab,
 		var(--neutral-5) 70%,
 		var(--theme-text-color, #000) var(--theme-text-color-amount, 0%)
 	) !important;
-	--background-secondary-alt: color-mix(in oklab, var(--neutral-86) 30%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+	--background-floating: color-mix(in oklab, var(--neutral-95) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+	--background-secondary-alt: color-mix(in oklab, var(--neutral-88) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 	--chat-background-default: hsl(218 4% 18% / 1) !important;
 }
 .theme-midnight {
-	--background-primary: color-mix(in oklab, var(--neutral-90) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+	--background-modifier-accent: hsl(217, 0%, 12%);
+	--background-primary: color-mix(in oklab, var(--neutral-96) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 	--background-secondary: color-mix(
 		in oklab,
-		var(--neutral-95) 100%,
+		var(--neutral-98) 100%,
 		var(--theme-base-color, #000) var(--theme-base-color-amount, 0%)
 	) !important;
-	--background-secondary-alt: color-mix(in oklab, var(--neutral-85) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+	--background-secondary-alt: color-mix(in oklab, var(--neutral-94) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
 	--background-tertiary: color-mix(
 		in oklab,
 		var(--neutral-100) 100%,
 		var(--theme-base-color, #000) var(--theme-base-color-amount, 0%)
 	) !important;
-	--chat-background-default: hsl(0 0% 11% / 1) !important;
+	--chat-background-default: hsl(0 0% 8.5% / 1) !important;
 }
 html.theme-dark:not(.theme-darker, .theme-midnight, .custom-theme-background) .interactive__972a0 {
 	color: var(--channels-default);
 }
 
-.sidebarRegionScroller__23e6b {
+html:not(.theme-light) .sidebarRegionScroller__23e6b {
 	background: none !important;
 }
 /* remove the title bar on web & linux */
@@ -90,12 +92,12 @@ html.theme-dark:not(.theme-darker, .theme-midnight, .custom-theme-background) .i
 		top: 69px !important;
 	}
 }
-  /* better support a client that like only 1 person uses but i hate disappointing people so im doing it */
-	html[data-dorion-platform="linux"] {
-		.bar_c38106 .trailing_c38106 {
-			top: 55.3px !important;
-		}
+/* better support a client that like only 1 person uses but i hate disappointing people so im doing it */
+html[data-dorion-platform="linux"] {
+	.bar_c38106 .trailing_c38106 {
+		top: 55.3px !important;
 	}
+}
 /* platform-specific fixes */
 .platform-osx .base_c48ade {
 	grid-template-areas:
@@ -724,12 +726,13 @@ html.platform-osx .title_c38106 {
 	.container__91a9d,
 	.option__56fec,
 	.wrapper_d5f3cd,
+	.guildInviteContainer__083ae,
 	.section__00943,
 	.container__0be77,
 	.content__07f91 {
 		border-radius: 4px;
 	}
-	.button__201d5:not(.cta_a3a802) {
+	:is(.button__201d5, .button__6af3a, .expressiveRive__6af3a):not(.cta_a3a802) {
 		border-radius: 3px;
 		&:not(.lookOutlined__201d5, .card__39ec2 .button_fb7f94, .button_fb7f94) {
 			border: none;
@@ -738,8 +741,19 @@ html.platform-osx .title_c38106 {
 			background: none;
 		}
 	}
+	.button__6af3a {
+		padding: 2px 16px;
+		.buttonChildrenWrapper__6af3a {
+			min-width: unset;
+			padding: unset;
+		}
+	}
 	.button__7d7f7 {
 		border-radius: 999% !important;
+	}
+	.sm__6af3a {
+		height: var(--custom-button-button-sm-height);
+	    min-height: var(--custom-button-button-sm-height);
 	}
 	.select__3f413 {
 		border: 1px solid transparent;
@@ -1181,12 +1195,11 @@ html.platform-osx .title_c38106 {
 			padding-left: unset;
 			padding: 0 12px;
 		}
-		.button__201d5 {
+		.button__6af3a {
 			flex: 0 0 auto;
 			font-weight: 600;
 			position: relative;
 			background: unset;
-			padding-bottom: 6px;
 			&:hover {
 				background-color: unset !important;
 			}
@@ -1380,73 +1393,6 @@ html.platform-osx .title_c38106 {
 	.wrapper_d5f3cd {
 		background-color: var(--background-secondary);
 		border: unset;
-	}
-
-	/* forums */
-	.container__01ae2 {
-		border-top: unset;
-		background: var(--bg-overlay-app-frame, var(--background-base-lowest));
-		box-sizing: unset;
-	}
-	.floating__01ae2 {
-		border-left: 1px solid var(--background-secondary);
-		width: 400px !important;
-		z-index: 103;
-	}
-	.card_f369db {
-		padding-bottom: 8px;
-	}
-	.grid_f369db > div:first-child,
-	.headerRow_f369db,
-	.list_f369db > div:first-child {
-		min-width: 400px;
-		padding-right: var(--spacing-16);
-	}
-	.list_f369db .header_f369db {
-		margin-top: 24px;
-	}
-	.tagsContainer_f369db {
-		padding-top: 24px;
-	}
-	.mainCard_f369db {
-		background: var(--background-base-lowest);
-		border: 1px solid transparent;
-	}
-	.container_faa96b {
-		padding: 12px;
-	}
-	.container_faa96b:hover {
-		background-color: var(--background-modifier-active) !important;
-		box-shadow: var(--elevation-high) !important;
-		transform: translateY(-2px) !important;
-	}
-	.container_faa96b.isOpen_faa96b {
-		background-color: var(--background-modifier-selected);
-		border: unset;
-		box-shadow: var(--shadow-low) !important;
-	}
-	.container__5808f {
-		background-color: var(--background-floating);
-		border-radius: var(--radius-xs);
-		box-shadow: var(--elevation-high);
-		padding: 8px;
-	}
-	.pill_a2c9e8 {
-		background-color: var(--background-secondary-alt);
-		border: 1px solid transparent;
-		border-radius: 4px;
-		color: var(--text-default);
-	}
-	.pill_a2c9e8.clickable_a2c9e8:not(.disabled_a2c9e8):hover {
-		background-color: var(--background-tertiary);
-		cursor: pointer;
-	}
-	.sortDropdown_f369db,
-	.tagsButton_f369db {
-		background-color: var(--background-secondary-alt);
-	}
-	:is(.sortDropdown_f369db, .tagsButton_f369db):hover {
-		background-color: var(--background-tertiary);
 	}
 
 	/* message flash */
@@ -1851,6 +1797,19 @@ html.platform-osx .title_c38106 {
 	/* owner crown */
 	.ownerIcon__5d473 {
 		color: var(--text-warning);
+	}
+
+	/* show header elements in a call */
+	.transparent__9293f .children__9293f, 
+	.transparent__9293f .toolbar__9293f, 
+	.transparent__9293f .upperContainer__9293f {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	/* registered games */
+	.notDetected_cc46f0 {
+		background: var(--background-base-lowest)
 	}
 }
 
