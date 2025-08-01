@@ -112,73 +112,6 @@ code {
 	margin-bottom: 1px;
 }
 
-/** revert switches*/
-.container__3f21e {
-	background: none !important;
-	border: none;
-}
-.slider__3f21e {
-	display: none;
-}
-.input__3f21e {
-	opacity: 1;
-	width: 0;
-	&:active:after {
-		width: 26px;
-	}
-	&:checked:active:after {
-		left: -11px;
-		width: 26px;
-	}
-
-	&:before,
-	&:after {
-		transition: 0.1s;
-	}
-	&:before {
-		content: "";
-		box-shadow: inset 0 1px 1px #00000026;
-		width: 42px;
-		height: 24px;
-		background: #72767d;
-		display: block;
-		border-radius: 50px;
-		margin-top: -3px;
-		margin-left: -6px;
-	}
-	&:after {
-		content: "";
-		display: block;
-		width: 18px;
-		height: 18px;
-		position: absolute;
-		top: 0;
-		left: -3px;
-		background: var(--white-500);
-		border-radius: 50px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-	}
-	&:hover:before {
-		background: hsl(222deg 4.63% 55.35%);
-	}
-	&:active:before {
-		background: hsl(222deg 4.63% 42.35%);
-	}
-
-	&:checked:before {
-		background: var(--brand-experiment);
-	}
-	&:checked:hover:before {
-		background: var(--brand-experiment-400);
-	}
-	&:checked:active:before {
-		background: var(--blurple-hover);
-	}
-
-	&:checked:after {
-		transform: translate3d(18px, 0, 0);
-	}
-}
 
 /* change color to green just for the role permissions form */
 .permissionsForm__16663 .container__87bf1 .input__87bf1 {
@@ -223,6 +156,7 @@ code {
 .item__344e6 {
 	cursor: pointer;
 }
+
 /** checkboxes*/
 .checkbox__09aca {
 	border-radius: 3px;
@@ -377,7 +311,6 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__1bda4[style="--radio-bar-acce
 	}
 	&:focus-within {
 		border-color: var(--blurple) !important;
-		--custom-input-focus-border-color: var(--blurple) !important;
 	}
 }
 
@@ -1175,6 +1108,7 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__1bda4[style="--radio-bar-acce
 .voteSelected__01c8c {
 	background-color: rgba(79, 84, 92, 0.3);
 }
+
 .side_aa8da2 .item_aa8da2:is(.voteDefault__01c8c, .voteSelected__01c8c) {
 	padding-top: 0px;
 	padding-bottom: 0px;
