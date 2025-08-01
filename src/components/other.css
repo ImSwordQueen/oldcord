@@ -112,7 +112,6 @@ code {
 	margin-bottom: 1px;
 }
 
-
 /* change color to green just for the role permissions form */
 .permissionsForm__16663 .container__87bf1 .input__87bf1 {
 	&:checked:before {
@@ -156,6 +155,7 @@ code {
 .item__344e6 {
 	cursor: pointer;
 }
+
 /** checkboxes*/
 .checkbox__09aca {
 	border-radius: 3px;
@@ -1108,6 +1108,7 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__1bda4[style="--radio-bar-acce
 .voteSelected__01c8c {
 	background-color: rgba(79, 84, 92, 0.3);
 }
+
 
 .side_aa8da2 .item_aa8da2:is(.voteDefault__01c8c, .voteSelected__01c8c) {
 	padding-top: 0px;
