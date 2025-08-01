@@ -112,46 +112,6 @@ code {
 	margin-bottom: 1px;
 }
 
-
-/* mana switches */
-.switchIndicator_a28278 {
-	height: 24px;
-	width: 44px;
-	background-color: #72767d !important;
-	transition: 0.1s;
-	&:hover {
-		background-color: hsl(222deg 4.63% 55.35%) !important;
-	}
-	&:active {
-		background-color: hsl(222deg 4.63% 42.35%) !important;
-	}
-	.thumb_a28278 {
-		width: 24px;
-		height: 24px;
-		margin-left: -4px;
-		margin-top: -2px;
-		rect {
-			width: 18px;
-			height: 18px;
-			rx: 50px;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-		}
-	}
-}
-
-.switchIndicator_a28278:has(> .thumb_a28278[style="left: 24px;"]) {
-	background-color: var(--blurple) !important;
-	&:hover {
-		background-color: var(--brand-experiment-400) !important;
-	}
-	&:active {
-		background-color: var(--blurple-hover) !important;
-	}
-	.thumb_a28278 {
-		margin-left: -6px;
-	}
-}
-
 /* change color to green just for the role permissions form */
 .permissionsForm__16663 .container__87bf1 .input__87bf1 {
 	&:checked:before {
@@ -195,6 +155,7 @@ code {
 .item__344e6 {
 	cursor: pointer;
 }
+
 /** checkboxes*/
 .checkbox__09aca {
 	border-radius: 3px;
@@ -1148,6 +1109,7 @@ html:is([lang="en-us"], [lang="en-gb"]) .radioBar__1bda4[style="--radio-bar-acce
 .voteSelected__01c8c {
 	background-color: rgba(79, 84, 92, 0.3);
 }
+
 
 .side_aa8da2 .item_aa8da2:is(.voteDefault__01c8c, .voteSelected__01c8c) {
 	padding-top: 0px;
