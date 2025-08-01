@@ -110,74 +110,6 @@ code {
 	margin-bottom: 1px;
 }
 
-/** revert switches*/
-.container__3f21e {
-	background: none !important;
-	border: none;
-}
-.slider__3f21e {
-	display: none;
-}
-.input__3f21e {
-	opacity: 1;
-	width: 0;
-	&:active:after {
-		width: 26px;
-	}
-	&:checked:active:after {
-		left: -11px;
-		width: 26px;
-	}
-
-	&:before,
-	&:after {
-		transition: 0.1s;
-	}
-	&:before {
-		content: "";
-		box-shadow: inset 0 1px 1px #00000026;
-		width: 42px;
-		height: 24px;
-		background: #72767d;
-		display: block;
-		border-radius: 50px;
-		margin-top: -3px;
-		margin-left: -6px;
-	}
-	&:after {
-		content: "";
-		display: block;
-		width: 18px;
-		height: 18px;
-		position: absolute;
-		top: 0;
-		left: -3px;
-		background: var(--white-500);
-		border-radius: 50px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-	}
-	&:hover:before {
-		background: hsl(222deg 4.63% 55.35%);
-	}
-	&:active:before {
-		background: hsl(222deg 4.63% 42.35%);
-	}
-
-	&:checked:before {
-		background: var(--brand-experiment);
-	}
-	&:checked:hover:before {
-		background: var(--brand-experiment-400);
-	}
-	&:checked:active:before {
-		background: var(--blurple-hover);
-	}
-
-	&:checked:after {
-		transform: translate3d(18px, 0, 0);
-	}
-}
-
 /* change color to green just for the role permissions form */
 .permissionsForm__16663 .container__87bf1 .input__87bf1 {
 	&:checked:before {
@@ -221,7 +153,8 @@ code {
 .item__344e6 {
 	cursor: pointer;
 }
-/** checkboxes*/
+
+/* checkboxes*/
 .checkbox_f525d3 {
 	&:not(.round_f525d3) {
 		border-color: #72767d !important ;
@@ -240,7 +173,7 @@ code {
 
 /** display:none graveyard*/
 .sessionMoreButton__803f2 svg, .newMemberBadge_f80704, .option__56fec:after, .premiumLabel_e681d1 > svg, .banner_ec75b3, .unreadIcon__7aaec /* new unread bar icon*/
-, .communityInfoPill_f37cb1, .item_b3f026 svg {
+, .container__87bf1 svg, .communityInfoPill_f37cb1, .item_b3f026 svg {
 	display: none;
 }
 
@@ -1369,6 +1302,15 @@ h2.title_b717a1,
 
 .scrollerBase_d125d2.thin_d125d2.container_e59759.content__49fc1 > .defaultColor__5345c.heading-md\/semibold_cf4812 {
 	font-weight: 500;
+}
+
+/* Today at */
+:is(.timestampInline_c19a55) time[aria-label^="Today at"] {
+	visibility: hidden;
+}
+:is(.timestampInline_c19a55) time[aria-label^="Today at"]:before {
+	content: attr(aria-label);
+	visibility: visible;
 }
 
 /* custom status modal */
