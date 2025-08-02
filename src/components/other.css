@@ -173,7 +173,7 @@ code {
 
 /** display:none graveyard*/
 .sessionMoreButton__803f2 svg, .newMemberBadge_f80704, .option__56fec:after, .premiumLabel_e681d1 > svg, .banner_ec75b3, .unreadIcon__7aaec /* new unread bar icon*/
-, .container__87bf1 svg, .communityInfoPill_f37cb1, .item_b3f026 svg {
+, .communityInfoPill_f37cb1, .item_b3f026 svg {
 	display: none;
 }
 
@@ -1305,12 +1305,12 @@ h2.title_b717a1,
 }
 
 /* Today at */
-:is(.timestampInline_c19a55) time[aria-label^="Today at"] {
-	visibility: hidden;
-}
-:is(.timestampInline_c19a55) time[aria-label^="Today at"]:before {
-	content: attr(aria-label);
-	visibility: visible;
+[class*="message"]:not([class*="contents"]) [class*="timestamp"]:not([class*="VisibleOnHover"]) time:not(:has([class*="edited"])) {
+    font-size: 0;
+    &::after {
+        font-size: 0.75rem;
+        content: attr(aria-label);
+    }
 }
 
 /* custom status modal */
