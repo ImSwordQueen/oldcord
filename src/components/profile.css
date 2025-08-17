@@ -275,11 +275,11 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 	
 	/*Change color based on activity type*/
 
-	/* Listening to Spotify*/
+	/* Listening to Spotify
 	&:has([src*="i.scdn.co"]) {
 		--background-tertiary: var(--spotify);
 		--background-tertiary-alt: var(--spotify-dark);
-	}
+	}*/
 	/* Live on Twitch
 	&:has([mask="url(#svg-mask-status-streaming)"]) {
 		--play: var(--twitch);
@@ -634,7 +634,7 @@ html.theme-dark .badgeContainer__635ed path {
 }
 
 /*pfp (duh)*/
-.user-profile-popout .avatar__75742 {
+.user-profile-popout .inner_c0bea0 .avatar__75742 {
 	left: 34% !important;
 	top: 14px !important;
 	width: 0;
@@ -772,7 +772,7 @@ background: var(--background-primary)
 	box-shadow: none;
 	outline: none;
 	border-radius: 0;
-	min-width: 350px;
+	width: 350px;
 }
 .profileHeader__9c3be{
 	min-height: 250px !important;
@@ -780,10 +780,10 @@ background: var(--background-primary)
 }
 
 .user-profile-modal-v2 .profileHeader__9c3be .avatar__75742 {
-	transform: scale(0.666);
+	transform: scale(0.8);
 	position: absolute !important;
-	top: 0px !important;
-	left: 130px !important;
+	top: 5px !important;
+	left: 70px !important;
 }
 
 
@@ -865,12 +865,6 @@ background: var(--background-primary)
 	&:has(.tabularNumbers__4bd52){
 		background: var(--brand-experiment-530) !important;
 			& h3{
-			color: white !important
-		}
-	}
-	&:has([src^="https://i.scdn.co/image/"]){
-		background: var(--spotify-dark) !important;
-		& h3{
 			color: white !important
 		}
 	}
