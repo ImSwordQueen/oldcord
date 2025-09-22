@@ -12,11 +12,10 @@ A theme for Discord that brings the 2020 UI back without removing features
 > [!IMPORTANT]  
 > - Enable "Sync Profile Themes" in `Settings > Accessibility` to fix broken profile colors
 > - UI Density should be on default, i wont support the other 2 options (they still kinda work though)
-> - To have the old gray colors, use the "Ash" theme in appearance settings
->   - If you use vencord's "Client Theme" plugin, use darker
+> - For the old gray colors, use the "Ash" theme in appearance settings
+>   - Don't use vencord's "Client Theme" plugin. Use discord's own theme picker (with fakenitro if needed)
 >  
-> - If you use BetterFolders, expect half of your screen to become black. I always try to fix this but no promises
-
+> - If you use BetterFolders, expect half of your screen to become black at some point
 <details> <summary><h3>Light mode (usable!)</h3></summary>
 
 Light mode does NOT have 2020 colors and it's tailored to ME but i think nobody cares at all
@@ -51,11 +50,9 @@ If you use custom/quickcss, paste the CSS at the very top!
 
 | Name                                                                                                                                  | Description                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| [Icon Revert](https://github.com/davart154/Icon-Revert-2023/blob/main/2023%20Icon%20Revert.theme.css)                                 | Reverts all icons to pre-2023. Can cause lag (see #37) |
 | [Vencord's NoMosaic plugin](https://vencord.dev/plugins/NoMosaic)                                                                     | Restores the old image layout                               |
-| [NoSuperReactions](https://github.com/xenrelle/Xens-BD-Dump/tree/main/plugins/NoSuperReactions)                                       | Removes super reactions                                     |
-| [OldFileUpload](https://github.com/xenrelle/Xens-BD-Dump/tree/main/plugins/OldFileUpload)                                             | Open the file picker with just one click                    |
 | [hide-nitro-upselling](https://github.com/D3SOX/complementary-discord-theme/blob/master/hide-nitro-upselling.betterdiscord.theme.css) | Hides nitro ads, could cause lag                            |
-| [Icon Revert](https://github.com/davart154/Icon-Revert-2023/blob/main/2023%20Icon%20Revert.theme.css)                                 | Reverts all icons to pre-2023. Can cause huge lag (see #37) |
 
 ---
 
