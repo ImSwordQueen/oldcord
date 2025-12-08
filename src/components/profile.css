@@ -58,7 +58,7 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 	box-shadow: none !important;
 	animation: unset !important;
 	animation-delay: unset !important;
-	margin-right: -10px !important;
+	margin-right: 35px !important;
 	& .button_bba79b:hover {
 		background: none;
 	}
@@ -66,9 +66,10 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 		background: none;
 	}
 	& .button_f7ecac.left_c97e55.button_c97e55 {
-		padding-left: 117px;
+		padding-left: 80px;
+		margin-right: 10px;
 		border-radius: 0px;
-		width: 40px;
+		width: 90px;
 		height: 19px;
 		z-index: 1;
 		opacity: 0;
@@ -92,20 +93,19 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 		background: var(--background-floating);
 		width: 220px !important;
 		position: fixed;
-		margin-top: -30px;
+		margin-top: -34px;
 	}
 	& .menus_ce8328 {
-		background: var(--background-floating);
+		background: var(--background-floating)
 	}
-	& .body_ce8328 {
+	& .inner_c0bea0>.body_ce8328 {
 		width: 230px;
 		background: transparent;
 	}
 	& .custom-theme-background .menu_c1e9c4 {
 		border: 0px;
 	}
-	&
-		:is(
+	& :is(
 			.banner__68edb,
 			.avatar__75742,
 			.descriptionClamp_f5f93a,
@@ -117,8 +117,7 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 		display: none;
 	}
 	& .container_ab8609 {
-		top: -40px !important;
-		left: 46px;
+		top: -45px !important;
 		white-space: nowrap;
 		text-align: left !important;
 		&:has(.addStatusPrompt_ab8609) {
@@ -135,24 +134,25 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 	}
 	& .outer_ab8609 {
 		top: 48px !important;
-		max-width: 120px;
 		right: 60px;
 		min-width: 160px !important;
 		margin-right: 20px;
 	}
 	& .container_ab8609:has(.addStatusPrompt_ab8609) .outer_ab8609 {
 		top: 4px !important;
-		right: 67px;
-		min-width: 215px !important;
 		border: none;
+		margin-top: -5px;
 		& .addStatusIcon_ab8609 {
-			padding-right: 7px;
+			padding-right: 4px;
+		}
+		& .defaultColor__4bd52 {
+			color: var(--header-secondary);
 		}
 		background: none !important;
 	}
 	& .container_ab8609:has(.popover_c97e55:hover) .outer_ab8609 {
 		background: var(--brand-experiment-560) !important;
-		width: 100px !important;
+		width: 190px !important;
 		border-radius: 2px;
 		block-size: 32px;
 
@@ -161,6 +161,12 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 		}
 		& .button_c97e55.right_c97e55 {
 			background: var(--brand-experiment-560) !important;
+		}
+	}
+	& .editable_ab8609.container_ab8609:has(.addStatusPrompt_ab8609):not(:has(.popover_c97e55:hover)):hover {
+		background: var(--brand-experiment-560);
+		& .outer_ab8609 {
+			right: 10px;
 		}
 	}
 	& .editable_ab8609.container_ab8609:has(.addStatusPrompt_ab8609):hover {
@@ -183,13 +189,19 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 	& .menus_ce8328,
 	.body_ce8328 {
 		padding: unset !important;
-		gap: unset !important;
+		gap: 1px !important;
 	}
 	&.user-profile-popout,
 	.userPopoutOverlayBackground_c69a7b {
 		width: 220px !important;
 		border-radius: 4px;
 		box-shadow: unset !important;
+	}
+	& .cardsList__9d597 {
+		display: none;
+	}
+	& .menuOverlay_ce8328:first-child ul>li:first-child {
+		display: none;
 	}
 }
 
@@ -229,7 +241,7 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 }
 /** Variables*/
 
-.inner_c0bea0:has(.activityContainer__84832) {
+.inner_c0bea0:has(.clickableContainer__39ec2) {
 	--text-muted: rgba(255, 255, 255, 0.6);
 	--text-tertiary: rgba(255, 255, 255, 0.9);
 	--text-secondary: rgba(255, 255, 255, 0.8);
@@ -405,7 +417,7 @@ html[lang="de"] .addStatusPrompt_ab8609 {
 	min-height: 40px !important;
 }
 /* make activity the first section*/
-section:has(.activityContainer__84832) {
+section:has(.clickableContainer__39ec2) {
 	order: -1;
 }
 .scroller_d2b491 {
@@ -418,7 +430,7 @@ section:has(.activityContainer__84832) {
 }
 
 /*make status icon white*/
-.user-profile-popout.outer_c0bea0:has(.activityContainer__84832) rect:not(path ~ rect) {
+.user-profile-popout.outer_c0bea0:has(.clickableContainer__39ec2) rect:not(path ~ rect) {
 	fill: #fff !important;
 }
 
@@ -821,6 +833,16 @@ svg.icon_a22cb0:has([d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 
 	width: 350px;
 	text-align: center;
 }
+.user-profile-modal-v2 .nicknameWithDisplayNameStyles__63ed3 {
+	position: fixed;
+	top: 100px;
+	width: 350px;
+	text-align: center;
+}
+
+.showEffect_dfb989.container_dfb989 .pop_dfb989:before /*! Fix misallined shadow text effect on floating username nitro effect*/ {
+    width: auto;
+}
 .container__8061a /*badges*/ {
 	left: -10px;
 	transform-origin: top left;
@@ -985,7 +1007,7 @@ text-align: center;
 	scale: 1.7;
 }
 .connection__9bfb9 {
-	border: 1px solid var(--background-modifier-accent);
+	border: 1px solid var(--border-subtle);
 	padding: 12px 14px 12px 8px;
 }
 .accountNameText__9bfb9 {
@@ -1144,16 +1166,13 @@ text-align: center;
 	& .text__530ce {
 		color: var(--interactive-normal) !important;
 	}
-	padding: 0 16px 10px 16px;
+	padding: 0 0 10px 0;
 	order: -1;
 	& .text__530ce.text-sm\/normal_cf4812 {
 		font-size: 12px !important;
 	}
 	.theme-light & .text__530ce.text-sm\/normal_cf4812 {
 		color: var(--interactive-active) !important;
-	}
-	.spacer__530ce {
-		visibility: hidden;
 	}
 }
 
@@ -1674,7 +1693,7 @@ html:is([lang="en-GB"], [lang="en-us"]) .footer__5be3e::after {
 }
 
 /*profile widgets/board/game collection*/
-.container__62dd3 {
+#widgets-tab .container__62dd3 {
 	background: var(--background-secondary-alt);
 	border: none;
 	border-radius: 12px;
@@ -1687,6 +1706,27 @@ html:is([lang="en-GB"], [lang="en-us"]) .footer__5be3e::after {
 		font-weight: 600;
 	}
 }
-.scroller__3b923 {
+#widgets-tab .scroller__3b923 {
 	gap: 8px;
+}
+#widgets-tab .button_b46968{
+	background: var(--button-secondary);
+	padding: 8px 16px;
+	width: fit-content;
+	color: #fff;
+	border-radius: 3px;
+	transition: 0.17s;
+	&:hover{
+		background: var(--button-secondary-hover);
+		text-decoration: none;
+	}
+}
+#widgets-tab .secondary_a22cb0{
+	background: var(--green);
+	&:hover{
+		background: var(--green-hover);
+	}
+		&:active{
+		background: var(--green-active);
+	}
 }

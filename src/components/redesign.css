@@ -26,7 +26,11 @@ html:not(.custom-theme-background).theme-dark {
 	--custom-channel-members-bg: var(--background-secondary) !important;
 	--background-surface-highest: var(--background-primary) !important;
 	--background-surface-higher: var(--background-floating, var(--background-tertiary)) !important;
-	--text-default: color-mix(in oklab, var(--primary-230) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+	--text-default: color-mix(in oklab, var(--primary-230) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+	--text-primary:var(--neutral-1);
+	--text-secondary:var(--neutral-16);
+	--text-tertiary:var(--neutral-22);
+	--header-secondary: color-mix(in oklab,var(--neutral-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%))
 }
 html:not(.custom-theme-background).theme-light,
 html:not(.custom-theme-background) .theme-light {
@@ -108,9 +112,8 @@ html.theme-dark:not(.theme-darker, .theme-midnight, .custom-theme-background) .i
 	color: var(--channels-default);
 }
 
-/* remove the title bar on web & linux */
-html.platform-web:not(html[data-dorion-platform="linux"]),
-html.platform-linux {
+/* remove the title bar on web */
+html.platform-web {
 	.base__5e434 {
 		grid-template-areas: "titleBar titleBar titleBar" "notice notice notice" "guildsList channelsList page";
 		grid-template-rows: [top] 0px [titlebarEnd] min-content [page] 0px [end] !important;
@@ -122,7 +125,7 @@ html.platform-linux {
 		display: none;
 	}
 	.bar_c38106 .trailing_c38106 {
-		top: 37px !important;
+		top: 30px !important;
 	}
 	.scroller_ef3116 {
 		padding-top: 12px !important;
@@ -135,12 +138,7 @@ html.platform-linux {
 		top: 69px !important;
 	}
 }
-/* better support a client that like only 1 person uses but i hate disappointing people so im doing it */
-html[data-dorion-platform="linux"] {
-	.bar_c38106 .trailing_c38106 {
-		top: 55.3px !important;
-	}
-}
+
 /* platform-specific fixes */
 html.platform-osx .base__5e434 {
 	grid-template-areas:
@@ -173,18 +171,19 @@ html.platform-osx .base__5e434 {
 html.platform-osx .systemBar_c38106 {
 	background: none;
 }
-html.platform-win .sidebarListRounded__5e434 {
+:is(html.platform-linux, html.platform-win) .sidebarListRounded__5e434 {
 	border-top-left-radius: 8px !important;
 }
-html.platform-win .trailing_c38106 :is(.recentsIcon_c99c29, .anchor_edefb8) {
-	transform: translateY(3px);
-}
-html.platform-win .container__5e434:has(.notice__6e2b9, .bd-notice) .sidebarListRounded__5e434 {
+:is(html.platform-linux, html.platform-win) .container__5e434:has(.notice__6e2b9, .bd-notice) .sidebarListRounded__5e434 {
 	border-top-left-radius: unset !important;
 }
 html.platform-osx .title_c38106 {
 	display: none !important;
 }
+:is(html.platform-linux, html.platform-win) .trailing_c38106{
+	margin-top: 6px !important;
+}
+
 #app-mount .h5_b717a1.eyebrow_b717a1 {
 	text-transform: uppercase !important;
 }
@@ -413,6 +412,9 @@ html.visual-refresh {
 		border: unset;
 		box-shadow: var(--shadow-ledge);
 	}
+	.invitesRefresh_f37cb1 .header_f37cb1 {
+		padding: unset;
+	}
 	.bannerVisible_f37cb1 .header_f37cb1 {
 		border-bottom-color: transparent;
 	}
@@ -422,6 +424,23 @@ html.visual-refresh {
 	.container__9293f {
 		border: unset;
 		box-shadow: var(--shadow-ledge);
+	}
+	.invitesRefresh_f37cb1 .headerContent_f37cb1 {
+		gap: unset;
+		justify-content: unset;
+		height: 100%;
+		span {
+			display: none;
+		}
+		.guildDropdown_f37cb1 {
+		    gap: unset;
+			width: 100%;
+			padding: var(--space-xs) var(--space-md);
+			border-radius: 0;
+		}
+		.guildIconContainer__85d16:not(.invitesRefresh__85d16) {
+			margin-inline-end: 0;
+		}
 	}
 	.title_f75fb0:has(.wrapper__44b0c) {
 		&:not(.gdm_f75fb0) {
@@ -862,6 +881,9 @@ html.visual-refresh {
 	}
 	.button__7d7f7 {
 		border-radius: 999% !important;
+		[data-text-variant="text-xs/normal"] {
+			display: none;
+		}
 	}
 	.sm_a22cb0 {
 		height: var(--custom-button-button-sm-height);
@@ -1049,6 +1071,14 @@ html.visual-refresh {
 		svg {
 			width: 24px;
 			height: 24px;
+			svg:has([d="M19.38 11.38a3 3 0 0 0 4.24 0l.03-.03a.5.5 0 0 0 0-.7L13.35.35a.5.5 0 0 0-.7 0l-.03.03a3 3 0 0 0 0 4.24L13 5l-2.92 2.92-3.65-.34a2 2 0 0 0-1.6.58l-.62.63a1 1 0 0 0 0 1.42l9.58 9.58a1 1 0 0 0 1.42 0l.63-.63a2 2 0 0 0 .58-1.6l-.34-3.64L19 11l.38.38ZM9.07 17.07a.5.5 0 0 1-.08.77l-5.15 3.43a.5.5 0 0 1-.63-.06l-.42-.42a.5.5 0 0 1-.06-.63L6.16 15a.5.5 0 0 1 .77-.08l2.14 2.14Z"]) {
+				width: 20px;
+				height: 20px;
+			}
+
+		}
+		.iconBadgeBottom__9293f {
+			bottom: 1px;
 		}
 	}
 	.avatarWrapper__37e49 {
@@ -1145,9 +1175,9 @@ html.visual-refresh {
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.02em;
-		color: var(--header-secondary) !important;
+		color: var(--header-secondary,var(--header-primary)) !important;
 	}
-	/* turn dot between "friends" and "online"  into a line*/
+	/* turn dot between "friends" and a"online"  into a line*/
 	.dot__9293f {
 		width: 1px;
 		height: 24px;
@@ -1249,13 +1279,14 @@ html.visual-refresh {
 			height: 32px;
 			margin-left: 4px;
 			margin-right: 4px;
+			--background-modifier-selected: transparent;
 		}
 		.spriteContainer__04eed {
 			--custom-emoji-sprite-size: 24px !important;
 		}
 		.lottieIcon__5eb9b {
-			height: unset !important;
-			width: unset !important;
+			height: 24px !important;
+			width: 24px !important;
 			.channelAppLauncher_e6e74f & {
 				width: 24px !important;
 			}
@@ -2312,7 +2343,6 @@ html.visual-refresh {
 }
 .bar_c38106 .trailing_c38106 .clickable_c99c29 {
 	margin: unset;
-	margin-top: 6px;
 }
 .bar_c38106 .channelTabs-trailing .trailing_c38106 {
 	top: 36px;
@@ -2341,7 +2371,6 @@ html.visual-refresh {
 	width: 30px;
 	height: 30px;
 	border-radius: 4px;
-	top: 3px;
 }
 .bar_c38106 .trailing_c38106 .iconWrapper__9293f .icon__9293f {
 	width: 24px;
@@ -2377,7 +2406,7 @@ html .bar_c38106 {
 	position: absolute;
 	gap: unset;
 	justify-content: center;
-	bottom: 35px;
+	bottom: 38px;
 	left: -10px;
 	z-index: 3001;
 	-webkit-app-region: no-drag !important;
@@ -2385,6 +2414,9 @@ html .bar_c38106 {
 		align-items: center;
 		width: 28px;
 		height: 24px;
+	}
+	.winButtonClose_c38106 {
+		height: 22px;
 	}
 }
 .winButtonsWithDivider_c38106:before {
