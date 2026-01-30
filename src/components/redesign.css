@@ -1029,9 +1029,10 @@ html.visual-refresh {
 		grid-template-areas:
 			"guilds sidebar"
 			"guilds panels";
-		grid-template-columns: [start] min-content [sidebarStart] auto [end];
+		grid-template-columns: [start] min-content [sidebarStart] 1fr [end];
 		grid-template-rows: [start] 1fr [panelsStart] min-content [end];
 		border-radius: 0;
+		position: relative;
 	}
 	&:not(.theme-midnight) .chat_z_gUBg,
 	&:not(.theme-midnight) .container_zrUwGA,
@@ -1040,13 +1041,17 @@ html.visual-refresh {
 	}
 	.base_pog62O .sidebar_pog62O > .guilds_pog62O {
 		grid-area: guilds;
-		margin-bottom: -13.5px;
+		margin-bottom: 0;
+		position: relative;
+		z-index: 1;
 	}
 	.base_pog62O .sidebar_pog62O > .sidebarList_pog62O {
 		grid-area: sidebar;
 		min-width: 240px;
 		max-width: none;
 		--custom-app-panels-height: 0;
+		position: relative;
+		z-index: 2;
 		.scroller_ysO7Gy {
 			margin-bottom: unset;
 		}
