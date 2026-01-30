@@ -1032,28 +1032,7 @@ html.visual-refresh {
 		  --trailingCounter: 6;
 		}
 	}
-	.base__5e434 .sidebar__5e434 {
-		display: grid;
-		grid-template-areas: "guilds sidebar" "guilds panels";
-		grid-template-columns: [start] min-content [sidebarStart] unset [end];
-		grid-template-rows: [start] 1fr [panelsStart] min-content [end];
-		border-radius: 0;
-	}
-	&:not(.theme-midnight) .chat_f75fb0,
-	&:not(.theme-midnight) .container__133bf,
-	&:not(.theme-midnight) :is(.content_f75fb0, .subtitleContainer_f75fb0, .sidebarList__5e434, .container_c8ffbb) {
-		border: none !important;
-	}
-	.base__5e434 .sidebar__5e434 > .guilds__5e434 {
-		grid-area: guilds;
-		margin-bottom: -13.5px;
-	}
-	.base__5e434 .sidebar__5e434 > .sidebarList__5e434 {
-		grid-area: sidebar;
-		min-width: 240px;
-		max-width: none;
-		--custom-app-panels-height: 0;
-	}
+
 
 	/*Betterfolders (vencord)*/
 	.base__5e434.vc-betterFolders-sidebar-grid {
