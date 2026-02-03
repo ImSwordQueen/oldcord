@@ -2346,9 +2346,7 @@ html.visual-refresh {
 		height: 20px;
 		.content_ST_Y69 {
 			margin-left: 8px;
-			.title_ST_Y69 {
-				color: var(--header-primary);
-			}
+
 		}
 		&:not(:has(img)) .content_ST_Y69:before {
 			content: url(https://discord.com/assets/dc7e9e55b3a6d39d24acdd650ecc2ef3.svg);
