@@ -690,7 +690,6 @@ html.visual-refresh {
 		box-shadow: var(--shadow-border), var(--shadow-high);
 		border-radius: 3px;
 		border: none;
-		background: var(--background-gradient-low, var(--background-primary));
 		width: 335px;
 		margin-left: 20px;
 		.queryContainer__55c99 {
