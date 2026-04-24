@@ -316,6 +316,17 @@
 		background-color: var(--background-mod-strong) !important;
 	}
 }
+.reaction__23977 .emoji {
+    height: 1rem;
+    margin: .125rem 0;
+    min-height: auto;
+    min-width: auto;
+    width: 1rem;
+}
+.reactionCount__23977 {
+	min-width: 9px !important;
+	font-size: 0.875rem;
+}
 .reaction_f8896c:hover,
 .reaction__23977:hover {
 	background-color: var(--background-mod-strong) !important;
@@ -361,7 +372,7 @@
 	cursor: default !important;
 }
 .open__3f413 {
-	border-color: var(--deprecated-text-input-border-hover) !important;
+	border-color: var(--input-border-hover) !important;
 }
 /* icon*/
 .select__3f413 path[d="M7.41 16.0001L12 11.4201L16.59 16.0001L18 14.5901L12 8.59006L6 14.5901L7.41 16.0001Z"] {
