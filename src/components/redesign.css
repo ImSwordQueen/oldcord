@@ -857,7 +857,7 @@ html.visual-refresh {
 			.themeColor_fb7f94,
 			.actionButtons_e8b59c button,
 			.streamPreviewWrapper__0489e button,
-			.popoutContentWrapper_af3b89 button
+			.followGameButtonActivityFeed__93528
 		) {
 			border: none !important;
 		}
@@ -917,7 +917,7 @@ html.visual-refresh {
 	.buttonChildren_a22cb0 .text-md\/medium_cf4812 {
 		font-size: 14px;
 	}
-	.secondary_a22cb0 {
+	.secondary_a22cb0, .followGameButtonActivityFeed__93528  {
 		background-color: var(--button-secondary);
 		&:hover {
 			background: var(--button-secondary-hover);
