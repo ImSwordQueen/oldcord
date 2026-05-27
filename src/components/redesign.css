@@ -665,9 +665,12 @@ html.visual-refresh {
 		background-color: var(--primary-700);
 	}
 	.search__49676 {
+		flex: unset;
 		margin: 0 8px;
+		min-width: unset;
+		max-width: 144px;
 	}
-	.searchBar_c322aa {
+	.search_c322aa, .searchBar_c322aa {
 		background: var(--background-gradient-low, var(--primary-700));
 		padding: 0 2px;
 		height: 24px;
@@ -702,16 +705,13 @@ html.visual-refresh {
 				border-radius: 4px;
 				line-height: 1.25;
 			}
-			[data-text-variant="text-sm/medium"]:first-of-type {
-				display: none;
-			}
 			[data-text-variant="text-sm/semibold"]:first-of-type {
 				color: var(--interactive-text-default) !important;
-				font-size: 16px;
+				font-size: 1rem;
 				font-weight: 500;
 			}
 			[data-text-variant="text-sm/medium"] {
-				font-size: 16px;
+				font-size: 1rem;
 			}
 		}
 		.groupWrapper__971b5[aria-labelledby="Message Contains-header"] {
@@ -917,7 +917,7 @@ html.visual-refresh {
 	.buttonChildren_a22cb0 .text-md\/medium_cf4812 {
 		font-size: 14px;
 	}
-	.secondary_a22cb0, .followGameButtonActivityFeed__93528  {
+	.secondary_a22cb0, :not(.popoutContainer__0f481) .followGameButtonActivityFeed__93528:not(:disabled)  {
 		background-color: var(--button-secondary);
 		&:hover {
 			background: var(--button-secondary-hover);
@@ -1009,9 +1009,11 @@ html.visual-refresh {
 	}
 
 	.toolbar__9293f.toolbar__9293f {
+		flex: 0 0 auto;
 		gap: 0;
 		margin-left: 10px;
 		margin-right: calc(40px * var(--trailingCounter));
+		max-width: unset;
 		padding: 0;
 	}
 	.base__5e434 {
@@ -1795,7 +1797,7 @@ html.visual-refresh {
 		}
 	}
 	/* go live modal v2 */
-	.container__8a031.size-xl__8a031:not(:has(.confirmStep_a55fdc, .gameProfileModal__8e830)) {
+	.container__8a031.size-xl__8a031:not(:has(.confirmStep_a55fdc, .gameProfile_d100d9)) {
 		width: 400px;
 	}
 	.container__8a031.size-xl__8a031 {
@@ -1944,7 +1946,8 @@ html.visual-refresh {
 	}
 
 	/* fix notice positioning */
-	.notice__6e2b9,
+.notice__29487,.card__53455 { display: none}
+	.notice__6e2b9, 
 	#bd-notices {
 		box-shadow: var(--elevation-low);
 		margin-top: 23px;
@@ -2534,6 +2537,14 @@ html.visual-refresh {
 	}
 }
 
+html:is([lang="en-US"]) .groupWrapper__971b5 [data-text-variant="text-sm/medium"]:first-of-type {
+	display: none;
+}
+
+html:not(:is([lang="en-US"])) .container__16eb0[aria-activedescendant$="--1"] .groupWrapper__971b5 [data-text-variant="text-sm/medium"]:first-of-type {
+	display: none;
+}
+
 html:is([lang="en-us"]) .groupHeader__971b5[id="Filters"] [data-text-variant="text-xs/semibold"] {
 	line-height: 0;
 	text-indent: -9999px;
@@ -2857,7 +2868,6 @@ html .bar_c38106 {
 	max-width: 1080px !important;
 	.panel__6131a {
 		margin: unset;
-		padding-left: unset;
 	}
 	.content_e9e3ed {
 		gap: var(--space-12);
