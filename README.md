@@ -1,5 +1,8 @@
 # Please do not use this fork. I made this fork to use OldCord on my already tweaked discord.
 
+This fork leaves switches native, fixes sidebar sizing and stacking, and removes the forced search-popout background and channel-update title color.
+The November 2026 upstream rebase carries these changes onto Discord's renamed classes.
+
 # OldCord 🏳️‍🌈🏳️‍⚧️
 
 A Discord theme that tries to restore its 2020 UI, while preserving most features.
